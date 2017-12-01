@@ -13,5 +13,5 @@ export const BILL_PAID = 'BILL_PAID';
 export const TABLE_CLEANED = 'TABLE_CLEANED';
 export const PARTY_JOINED = 'PARTY_JOINED';
 export const PARTY_LEFT = 'PARTY_LEFT';
-export const PARTIES_REORDERD = 'PARTIES_REORDERD';
+export const PARTY_REORDERD = 'PARTY_REORDERD';
 export const PARTY_SEATED = 'PARTY_SEATED';

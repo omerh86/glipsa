@@ -1,4 +1,4 @@
-import { PARTY_JOINED, PARTY_LEFT, PARTIES_REORDERD } from '../constants';
+import { PARTY_JOINED, PARTY_LEFT, PARTY_REORDERD } from '../constants';
 import { Injectable } from '@angular/core';
 import { NgRedux } from 'ng2-redux';
 import { IAppState } from '../store';
@@ -34,7 +34,7 @@ export class LineupActions {
 
     reOrderLine = ({ partyId, desiredIndex}) => {
         return this._ngRedux.dispatch({
-            type: PARTIES_REORDERD,
+            type: PARTY_REORDERD,
             payload: {
                 partyId: partyId,
                 desiredIndex: desiredIndex

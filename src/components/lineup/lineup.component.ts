@@ -26,8 +26,8 @@ export class Lineup implements OnInit {
     @Output() partyReOrder: EventEmitter<any> = new EventEmitter();
 
     constructor(private dragulaService: DragulaService) {
-
     }
+
     ngOnInit() {
         this.dragulaService.dropModel.subscribe((value) => {
             this.onDrop(value.slice(1));
@@ -36,7 +36,7 @@ export class Lineup implements OnInit {
     }
     private onDrop(args) {
         let [el, parent] = args;
-        this.onPartyReOrder(this.getElementPartyId(el),this.getElementIndex(el))
+        this.onPartyReOrder(this.getElementPartyId(el), this.getElementIndex(el))
     }
 
     private getElementIndex(el: any): number {
@@ -48,7 +48,6 @@ export class Lineup implements OnInit {
     }
 
     private onPartyReOrder(partyId: number, desiredIndex: number) {
-        console.log(desiredIndex);
         this.partyReOrder.emit({ partyId: partyId, desiredIndex: desiredIndex })
     }
 
