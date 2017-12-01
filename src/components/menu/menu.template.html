@@ -1,0 +1,39 @@
+<tb-panel>
+  <header>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <th>Desc</th>
+        <th>Qty</th>
+        <th>Stock</th>
+        <th style="width:20px">
+          <div class="pull-left">+/-</div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of menuItems">
+        <td>{{ item.description }}</td>
+        <td>{{ currentOrder.get(item.menuId, 0) }}</td>
+        <td>{{ item.stock }}</td>
+        <td style="width:60px">
+          <button
+            type="button"
+            (click)="itemAdded.emit({tableId: tableId, menuId: item.menuId})">
+            +
+          </button>
+          <button
+            type="button"
+            (click)="itemRemoved.emit({tableId: tableId, menuId: item.menuId})">
+            -
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+  </table>
+  <footer>
+  </footer>
+</tb-panel>
